@@ -1,4 +1,9 @@
 import 'bootstrap';
 import '../styles/main.scss';
+import cardList from './components/cardList/cardList';
 
-console.error('hi');
+const init = () => {
+  cardList();
+};
+
+init();
