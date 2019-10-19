@@ -2,11 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  justify-content: space-evenly;
   margin-top: 10em;
 
   .card {
-    margin-top: 5em;
+    height: 250px;
+    width: 250px;
+    margin: 3em;
     font-family: 'Long Cang', cursive;
   }
 
@@ -14,5 +15,9 @@
     display: flex;
     justify-content: center;
     margin-top: 2em;
+  }
+
+  .hide {
+    display: none;
   }
 }
