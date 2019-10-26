@@ -5,7 +5,7 @@ import './cardList.scss';
 const cardListBuilder = (planets) => {
   let domString = '';
   planets.forEach((planet) => {
-    domString += '<div class="card text-white bg-dark mb-3">';
+    domString += '<div class="card text-white bg-dark mb-3" id="small-card">';
     domString += '<div class="card-body">';
     domString += `<h1 class="card-title">${planet.name}</h1>`;
     domString += `<img class="card-img-top hide" id="pic" src=${planet.imageUrl}></img>`;
@@ -25,11 +25,6 @@ const cardListEvents = () => {
     $(planet.target).children('img').addClass('hide');
     $(planet.target).children('h1').removeClass('hide');
   });
-
-  // $('body').on('click', '.card', () => {
-  //   utilities.printToDom('color-list', '');
-  //   utilities.printToDom('single-color', 'this is a single item.  maybe we should call another component?');
-  // });
 };
 
 export default { cardListBuilder, cardListEvents };
