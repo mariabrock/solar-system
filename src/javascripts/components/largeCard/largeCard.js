@@ -5,7 +5,7 @@ import './largeCard.scss';
 const largeCardBuilder = (planets) => {
   let domString = '';
   planets.forEach((planet) => {
-    domString = '<div class="card" id="largeCard">';
+    domString = `<div class="card hide" id="${planet.name}">`;
     domString = `<img src="${planet.imageUrl}" class="card-img-top">`;
     domString = '<div class="card-body">';
     domString = `<h5 class="card-title">${planet.name}</h5>`;
@@ -19,7 +19,7 @@ const largeCardBuilder = (planets) => {
 
 const largeCardEvent = () => {
   $('body').on('click', () => {
-    utilities.printToDom('large-card', '');
+    utilities.printToDom('small-card', '');
   });
   console.error('click');
 };
