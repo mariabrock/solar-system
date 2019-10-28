@@ -20,11 +20,14 @@ const largeCardEvent = () => {
   $('body').on('click', '.card', (e) => {
     const planetName = $(e.target).closest('.card')[0].id;
     console.error('you clicked!', planetName);
-    $('body').find(p);
-    // $(e.target).children().removeClass('hide');
-    // $(e.target).children(`#${planet.name}`).addClass('hide');
-    largeCardBuilder();
+    const foundPlanet = $(p).find(planetName);
+    (foundPlanet === planetName).on('click', '#planet-cards').addClass('hide');
+    $('#large-card').on('click').removeClass('hide');
   });
+  largeCardBuilder();
 };
+// $('#planet-cards').addClass('hide');
+  // $('#large-card').on('click').removeClass('hide');
+
 
 export default { largeCardBuilder, largeCardEvent };
