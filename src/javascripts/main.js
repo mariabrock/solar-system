@@ -8,8 +8,7 @@ const init = () => {
   const planets = p.getPlanets();
   cardList.cardListBuilder(planets);
   cardList.cardListEvents(planets);
-  largeCard.largeCardBuilder(planets);
-  // largeCard.largeCardEvent(planets);
+  largeCard.largeCardEvent(planets);
 };
 
 init();
